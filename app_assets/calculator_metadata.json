@@ -1,0 +1,106 @@
+{
+  "app_title": "LPD Postoperative Physical Inactivity Calculator",
+  "best_model": "RandomForest",
+  "best_model_display": "Random Forest",
+  "validation_auc": 0.7830188679245284,
+  "threshold": 0.3314943805455569,
+  "selected_variables": [
+    "年龄",
+    "手术时间",
+    "ASA分级",
+    "BMI异常",
+    "人均月收入＜5000RMB",
+    "胰瘘"
+  ],
+  "fields": [
+    {
+      "name": "年龄",
+      "label": "Age",
+      "type": "numeric",
+      "default": 63.0,
+      "min": 30.0,
+      "max": 84.0,
+      "q1": 55.5,
+      "q3": 68.0
+    },
+    {
+      "name": "手术时间",
+      "label": "Operative time",
+      "type": "numeric",
+      "default": 300.0,
+      "min": 113.0,
+      "max": 780.0,
+      "q1": 240.5,
+      "q3": 370.0
+    },
+    {
+      "name": "ASA分级",
+      "label": "ASA classification",
+      "type": "categorical",
+      "default": 2,
+      "options": [
+        {
+          "value": 2,
+          "label": "ASA 2"
+        },
+        {
+          "value": 3,
+          "label": "ASA 3"
+        }
+      ]
+    },
+    {
+      "name": "BMI异常",
+      "label": "Abnormal BMI",
+      "type": "categorical",
+      "default": 1,
+      "options": [
+        {
+          "value": 0,
+          "label": "No"
+        },
+        {
+          "value": 1,
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "name": "人均月收入＜5000RMB",
+      "label": "Monthly income <5000RMB",
+      "type": "categorical",
+      "default": 0,
+      "options": [
+        {
+          "value": 0,
+          "label": "No"
+        },
+        {
+          "value": 1,
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "name": "胰瘘",
+      "label": "Pancreatic fistula",
+      "type": "categorical",
+      "default": 0,
+      "options": [
+        {
+          "value": 0,
+          "label": "No"
+        },
+        {
+          "value": 1,
+          "label": "Yes"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "positive": "Postoperative physical inactivity",
+    "negative": "Active"
+  },
+  "note": "This calculator is intended for research and auxiliary risk assessment only. It does not constitute clinical decision-making advice."
+}
